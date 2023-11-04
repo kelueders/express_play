@@ -1,0 +1,27 @@
+Microsoft Windows [Version 10.0.22621.2428]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kelue>cd \1_Software_Dev
+The system cannot find the path specified.
+
+C:\Users\kelue>cd 1_Software_dev
+The system cannot find the path specified.
+
+C:\Users\kelue>cd 1_Software_Dev
+The system cannot find the path specified.
+
+C:\Users\kelue>cd 1_Software_Dev\
+The system cannot find the path specified.
+
+C:\Users\kelue>cd C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>npx kill-port 3000
+Need to install the following packages:
+  kill-port@2.0.1
+Ok to proceed? (y) y
+Process on port 3000 killed
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>npx kill-port 3000
+Process on port 3000 killed
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>

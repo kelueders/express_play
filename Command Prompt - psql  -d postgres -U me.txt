@@ -1,0 +1,94 @@
+Microsoft Windows [Version 10.0.22621.2428]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kelue>psql -d postgre -U me
+'psql' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kelue>cd "C:\Program Files\PostgreSQL\16\bin"
+
+C:\Program Files\PostgreSQL\16\bin>psql
+Password for user kelue:
+psql: error: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "kelue"
+
+C:\Program Files\PostgreSQL\16\bin>psql postgres
+Password for user kelue:
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+C:\Program Files\PostgreSQL\16\bin>psql -d postgres -U me
+Password for user me:
+psql (16.0, server 15.3)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=> CREATE DATABASE api;
+CREATE DATABASE
+postgres=> \list
+                                                                         List of databases
+      Name      |  Owner   | Encoding | Locale Provider |          Collate         |           Ctype            | ICU Locale | ICU Rules |   Access privileges
+----------------+----------+----------+-----------------+----------------------------+----------------------------+------------+-----------+-----------------------
+ api            | me       | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ car_dealership | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ dvd_rental     | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ dvd_rental121  | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ mock_amazon121 | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ movie_theater  | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ postgres       | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ presidents     | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           |
+ template0      | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           | =c/postgres          +
+                |          |          |                 |         |                            |            |           | postgres=CTc/postgres
+ template1      | postgres | UTF8     | libc            | English_United States.1252 | English_United States.1252 |            |           | =c/postgres          +
+                |          |          |                 |         |                            |            |           | postgres=CTc/postgres
+(10 rows)
+
+
+postgres=>
+postgres=> \c api
+psql (16.0, server 15.3)
+You are now connected to database "api" as user "me".
+api=> CREATE TABLE users (
+api(> ID SERIAL PRIMARY KEY,
+api(> name VARCHAR(30),
+api(> email VARCHAR(30)
+api(> );
+CREATE TABLE
+api=> INSERT INTO users (name, email)
+api-> VALUES ('Jerry', 'jerry@example.com'), ('George', 'george@example.com');
+INSERT 0 2
+api=> SELECT * FROM users;
+ id |  name  |       email
+----+--------+--------------------
+  1 | Jerry  | jerry@example.com
+  2 | George | george@example.com
+(2 rows)
+
+
+api=> SELECT * FROM users;
+ id |  name  |       email
+----+--------+--------------------
+  1 | Jerry  | jerry@example.com
+  2 | George | george@example.com
+  3 | nemo   | nemo@abc.com
+(3 rows)
+
+
+api=> SELECT * FROM users;
+ id |    name    |       email
+----+------------+--------------------
+  1 | Jerry      | jerry@example.com
+  2 | George     | george@example.com
+  3 | nemo smith |
+(3 rows)
+
+
+api=> SELECT * FROM users;
+ id |  name  |       email
+----+--------+--------------------
+  1 | Jerry  | jerry@example.com
+  2 | George | george@example.com
+(2 rows)
+
+
+api=>

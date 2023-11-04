@@ -1,0 +1,136 @@
+Microsoft Windows [Version 10.0.22621.2428]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kelue>cd C:\Users\kelue\Documents\1_Software_Dev\Projects
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects>mkdir node-api-postgres
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects>cd node-api-postgres
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>npm init -y
+Wrote to C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\package.json:
+
+{
+  "name": "api-postgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>npm i express pg
+
+added 78 packages, and audited 79 packages in 3s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice
+npm notice New major version of npm available! 9.5.1 -> 10.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.2.2
+npm notice Run npm install -g npm@10.2.2 to update!
+npm notice
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>npm install -g npm@10.2.2
+npm ERR! code EBADENGINE
+npm ERR! engine Unsupported engine
+npm ERR! engine Not compatible with your version of node/npm: npm@10.2.2
+npm ERR! notsup Not compatible with your version of node/npm: npm@10.2.2
+npm ERR! notsup Required: {"node":"^18.17.0 || >=20.5.0"}
+npm ERR! notsup Actual:   {"npm":"9.5.1","node":"v18.16.1"}
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\kelue\AppData\Local\npm-cache\_logs\2023-11-01T03_02_20_441Z-debug-0.log
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>node index.js
+App running on port 3000.
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>^E
+'' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>q\a
+The system cannot find the path specified.
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>node
+Welcome to Node.js v18.16.1.
+Type ".help" for more information.
+>
+>
+>
+>
+>
+>
+>
+> ex
+Uncaught ReferenceError: ex is not defined
+> no
+Uncaught ReferenceError: no is not defined
+>
+>
+>
+>
+>
+>
+>
+> exit
+Uncaught ReferenceError: exit is not defined
+>
+> .help
+.break    Sometimes you get stuck, this gets you out
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commands in this REPL session to a file
+
+Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+> .exit
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>node index.js
+App running on port 3000.
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>npx kill-port 3000
+Process on port 3000 killed
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>node index.js
+App running on port 3000.
+SyntaxError: Unexpected token } in JSON at position 26
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\body-parser\lib\types\json.js:89:19)
+    at C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\raw-body\index.js:231:16)
+    at done (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+SyntaxError: Unexpected token } in JSON at position 26
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\body-parser\lib\types\json.js:89:19)
+    at C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\raw-body\index.js:231:16)
+    at done (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>
+C:\Users\kelue\Documents\1_Software_Dev\Projects\node-api-postgres>
